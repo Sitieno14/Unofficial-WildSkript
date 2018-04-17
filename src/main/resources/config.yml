@@ -4,5 +4,5 @@ doc: false
 #Enable debug
 debug: false
 
-# MCStats.net
+# MCStats.org
 mcstats-enable: true
