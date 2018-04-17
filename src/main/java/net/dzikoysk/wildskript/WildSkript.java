@@ -77,28 +77,26 @@ public class WildSkript extends JavaPlugin {
             metrics();
         }
 
-        log("~ Created by \u2764 Dzikoysk ~");
-
-        checkUpdate();
+        log("~ WildSkript created by \u2764 Dzikoysk ~");
     }
 
     private boolean cannot() {
         for (Plugin plugin : Bukkit.getPluginManager().getPlugins()) {
             if (plugin.getName().equalsIgnoreCase("skript")) {
-                log("Skript hooked!");
+                log("Hooked with Skript!");
                 skript = true;
             }
             if (plugin.getName().equalsIgnoreCase("skQuery")) {
-                log("skQuery hooked!");
+                log("Hooked with skQuery!");
                 skQuery = true;
             }
             if (plugin.getName().equalsIgnoreCase("randomSk")) {
-                log("RandomSK hooked!");
+                log("Hooked with SkQuery!");
                 randomSk = true;
             }
         }
         if (!skript) {
-            warning("Skript not found! Stopping registration ...");
+            warning("Stopping registration because Skript wasn't found...");
             return true;
         }
         enable = true;
@@ -128,28 +126,6 @@ public class WildSkript extends JavaPlugin {
         }
     }
 
-    private void checkUpdate() {
-        final Thread thread = new Thread() {
-            public void run() {
-                String latest = IOUtils.getContent("http://www.dzikoysk.net/projects/wildskript/download/latest.info");
-                if (latest == null || latest.isEmpty()) {
-                    update("Failed to check the new version of WildSkript.");
-                }
-                else if (latest.equalsIgnoreCase(getVersion())) {
-                    update("You have a current version of WildSkript.");
-                }
-                else {
-                    update("");
-                    update("Available is new version of WildSkript!");
-                    update("Current: " + getVersion());
-                    update("Latest: " + latest);
-                    update("");
-                }
-            }
-        };
-        thread.start();
-    }
-
     private void bungee() {
         Bukkit.getMessenger().registerOutgoingPluginChannel(wildskript, "BungeeCord");
     }
@@ -174,10 +150,6 @@ public class WildSkript extends JavaPlugin {
         return timer;
     }
 
-    public static void update(String content) {
-        Bukkit.getLogger().info("[WildSkript][Updater] > " + content);
-    }
-
     public static void log(String log) {
         Bukkit.getLogger().info("[WildSkript] " + log);
     }
@@ -187,18 +159,14 @@ public class WildSkript extends JavaPlugin {
     }
 
     public static void warning(String log) {
-        Bukkit.getLogger().severe("[WildSkript][Error] #!#");
-        Bukkit.getLogger().severe("[WildSkript][Error] #!# ======={ WildSkript Warning }=======");
-        Bukkit.getLogger().severe("[WildSkript][Error] #!# " + log);
-        Bukkit.getLogger().severe("[WildSkript][Error] #!#");
+        Bukkit.getLogger().severe("[WildSkript - Error] #!# ======={ WildSkript Warning }=======");
+        Bukkit.getLogger().severe("[WildSkript - Error] #!# " + log);
+        Bukkit.getLogger().severe("[WildSkript - Error] #!#");
     }
-
     public static void error(String log) {
-        Bukkit.getLogger().severe("[WildSkript][Error] #!#");
-        Bukkit.getLogger().severe("[WildSkript][Error] #!# =!!!======{ WildSkript Error }======!!!=");
-        Bukkit.getLogger().severe("[WildSkript][Error] #!# " + log);
-        Bukkit.getLogger().severe("[WildSkript][Error] #!#");
-        Bukkit.getLogger().severe("[WildSkript][Error] #!#");
+        Bukkit.getLogger().severe("[WildSkript - Error] #!# =!!!======{ WildSkript Error }======!!!=");
+        Bukkit.getLogger().severe("[WildSkript - Error] #!# " + log);
+        Bukkit.getLogger().severe("[WildSkript - Error] #!#");
     }
 
     public static boolean skQuery() {
@@ -217,11 +185,3 @@ public class WildSkript extends JavaPlugin {
         return debug;
     }
 }
-   
-    
-   
-   
-   
-   
-   
- 
