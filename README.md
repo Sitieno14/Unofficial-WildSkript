@@ -1,9 +1,7 @@
-A WildSkript unofficial build to work with most Spigot versions 1.8-1.12+
+A WildSkript unofficial build and fork to work with most Spigot versions 1.8-1.12+
 
 WildSkript is an Addon to plugin Skript that increases the set of events, conditions, effects, expresions and this add new elements.
-
-### Other Useful Links
-* **Spigot Unofficial Build by Sitieno14** https://www.spigotmc.org/resources/unofficial-wildskript-1-8-1-12-2.55784/
-* **GitHub WildSkript** https://https://github.com/Dzikoysk/WildSkript
+### Links about OFFICIAL WildSkript
+* **Official GitHub WildSkript** https://https://github.com/Dzikoysk/WildSkript
 * **Official WildSkript DevBukkit** - http://dev.bukkit.org/bukkit-plugins/wildskript/
-* **WildSkript SkUnity** - https://docs.skunity.com/addon/WildSkript
+* **Official WildSkript SkUnity** - https://docs.skunity.com/addon/WildSkript
