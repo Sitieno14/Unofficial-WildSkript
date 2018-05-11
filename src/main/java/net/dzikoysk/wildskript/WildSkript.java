@@ -77,7 +77,8 @@ public class WildSkript extends JavaPlugin {
             metrics();
         }
 
-        log("~ WildSkript created by \u2764 Dzikoysk ~");
+        log("~ WildSkript made with \u2764 by Dzikoysk ~");
+        log("~ You are running an Unofficial WildSkript build (1.8.x - 1.12.2) made by Sitieno14 ~");
     }
 
     private boolean cannot() {
@@ -96,7 +97,8 @@ public class WildSkript extends JavaPlugin {
             }
         }
         if (!skript) {
-            warning("Stopping registration because Skript wasn't found...");
+            error("Stopping registration because Skript wasn't found!"
+            warning("You can download Skript from: https://docs.skunity.com/downloads");
             return true;
         }
         enable = true;
