@@ -97,7 +97,7 @@ public class WildSkript extends JavaPlugin {
             }
         }
         if (!skript) {
-            error("Stopping registration because Skript wasn't found!"
+            error("Stopping registration because Skript wasn't found!");
             warning("You can download Skript from: https://docs.skunity.com/downloads");
             return true;
         }
